@@ -40,10 +40,10 @@ namespace GpaCalculatorDemo
         public static List<StudentDataClass> GetStudents()
             => new List<StudentDataClass>()
             {
-                new StudentDataClass("Demario","Douce",5632712,1,"Main",100,100,100,100,4,4.0),
-                new StudentDataClass("Aston","Lee",5632212,2,"Other",50,50,100,100,4,4.0),
-                new StudentDataClass("Joy","Ton",323121,3,"Other",10,10,10,10,4,1.0),
-                new StudentDataClass("Manhan","Ruth",1231234,4,"Main",20,20,20,20,2,1.0),
+                new StudentDataClass("Demario","Douce",5632712,1,"Main",100,100,100,100,4,4),
+                new StudentDataClass("Aston","Lee",5632212,2,"Other",50,50,100,100,4,4),
+                new StudentDataClass("Joy","Ton",323121,3,"Other",10,10,10,10,4,1),
+                new StudentDataClass("Manhan","Ruth",1231234,4,"Main",20,20,20,20,2,1),
 
             };
     }

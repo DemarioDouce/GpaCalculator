@@ -34,9 +34,12 @@ namespace GpaCalculatorDemo
 
         private void BtnAddRec_Click(object sender, EventArgs e)
         {
+            GpaTotal = Convert.ToDouble(TbxCourse1.Text)  + Convert.ToDouble(TbxCourse2.Text)  + Convert.ToDouble(TbxCourse3.Text)  + Convert.ToDouble(TbxCourse4.Text)  / Convert.ToDouble(TbxCredits.Text);
+           
+
 
             StudentDataClass NewStudent = new StudentDataClass(TbxFName.Text, TbxLName.Text, Convert.ToInt32(TbxStuId.Text), RdoSemester, ChkCampus, Convert.ToDouble(TbxCourse1.Text),
-            Convert.ToDouble(TbxCourse2.Text), Convert.ToDouble(TbxCourse3.Text), Convert.ToDouble(TbxCourse4.Text), Convert.ToDouble(TbxCredits.Text),GpaTotal);
+            Convert.ToDouble(TbxCourse2.Text), Convert.ToDouble(TbxCourse3.Text), Convert.ToDouble(TbxCourse4.Text), Convert.ToDouble(TbxCredits.Text), point(GpaTotal));
 
             
             students.Add(NewStudent);
@@ -45,6 +48,41 @@ namespace GpaCalculatorDemo
             DgrdStudents.DataSource = null;
 
             DgrdStudents.DataSource = students;
+
+
+            double point(double mark)
+            {
+                int p = 0;
+
+                if (mark < 40)
+                {
+                    p = 0;
+                }
+                else if (mark >= 40 && mark < 50)
+                {
+
+                    p = 1;
+                }
+                else if (mark >= 50 && mark < 60)
+                {
+
+                    p = 2;
+                }
+                else if (mark >= 60 && mark < 70)
+                {
+
+                    p = 3;
+                }
+                else if (mark >= 70 && mark < 100000)
+                {
+
+                    p = 4;
+                }
+
+                return p;
+
+            }
+
         }
 
         private void Rdo1_CheckedChanged(object sender, EventArgs e)
@@ -165,18 +203,12 @@ namespace GpaCalculatorDemo
             DgrdStudents.DataSource = students;
         }
 
-        public double GpaCal()
-        {
-
-            GpaTotal = Convert.ToDouble(TbxCourse1.Text) + Convert.ToDouble(TbxCourse2.Text) + Convert.ToDouble(TbxCourse3.Text) + Convert.ToDouble(TbxCourse4.Text) * Convert.ToDouble(TbxCredits.Text) / Convert.ToDouble(TbxCredits.Text);
-            Convert.ToDecimal(string.Format("{0:F2}", GpaTotal));
-            return GpaTotal;
-        }
-
         private void BtnRanGpaCal_Click(object sender, EventArgs e)
         {
             RandomGpaCalculationForm form = new RandomGpaCalculationForm(this);
             form.Show();
         }
+
+
     }
 }
