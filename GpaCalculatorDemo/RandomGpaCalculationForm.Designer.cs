@@ -33,11 +33,6 @@
             this.LblScores = new System.Windows.Forms.Label();
             this.LblGrade = new System.Windows.Forms.Label();
             this.LblPoint = new System.Windows.Forms.Label();
-            this.TbxCc1 = new System.Windows.Forms.TextBox();
-            this.TbxCc3 = new System.Windows.Forms.TextBox();
-            this.TbxCc2 = new System.Windows.Forms.TextBox();
-            this.TbxCc4 = new System.Windows.Forms.TextBox();
-            this.TbxCc5 = new System.Windows.Forms.TextBox();
             this.TbxCu1 = new System.Windows.Forms.TextBox();
             this.TbxCu2 = new System.Windows.Forms.TextBox();
             this.TbxCu3 = new System.Windows.Forms.TextBox();
@@ -67,6 +62,11 @@
             this.LblCuPo = new System.Windows.Forms.Label();
             this.LblGraPoAve = new System.Windows.Forms.Label();
             this.LblOvGrPo = new System.Windows.Forms.Label();
+            this.CbxCC1 = new System.Windows.Forms.ComboBox();
+            this.CbxCC2 = new System.Windows.Forms.ComboBox();
+            this.CbxCC3 = new System.Windows.Forms.ComboBox();
+            this.CbxCC4 = new System.Windows.Forms.ComboBox();
+            this.CbxCC5 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LblCourseCode
@@ -123,41 +123,6 @@
             this.LblPoint.Size = new System.Drawing.Size(54, 16);
             this.LblPoint.TabIndex = 4;
             this.LblPoint.Text = "POINT";
-            // 
-            // TbxCc1
-            // 
-            this.TbxCc1.Location = new System.Drawing.Point(15, 38);
-            this.TbxCc1.Name = "TbxCc1";
-            this.TbxCc1.Size = new System.Drawing.Size(114, 20);
-            this.TbxCc1.TabIndex = 5;
-            // 
-            // TbxCc3
-            // 
-            this.TbxCc3.Location = new System.Drawing.Point(15, 90);
-            this.TbxCc3.Name = "TbxCc3";
-            this.TbxCc3.Size = new System.Drawing.Size(114, 20);
-            this.TbxCc3.TabIndex = 6;
-            // 
-            // TbxCc2
-            // 
-            this.TbxCc2.Location = new System.Drawing.Point(15, 64);
-            this.TbxCc2.Name = "TbxCc2";
-            this.TbxCc2.Size = new System.Drawing.Size(114, 20);
-            this.TbxCc2.TabIndex = 7;
-            // 
-            // TbxCc4
-            // 
-            this.TbxCc4.Location = new System.Drawing.Point(15, 116);
-            this.TbxCc4.Name = "TbxCc4";
-            this.TbxCc4.Size = new System.Drawing.Size(114, 20);
-            this.TbxCc4.TabIndex = 8;
-            // 
-            // TbxCc5
-            // 
-            this.TbxCc5.Location = new System.Drawing.Point(15, 142);
-            this.TbxCc5.Name = "TbxCc5";
-            this.TbxCc5.Size = new System.Drawing.Size(114, 20);
-            this.TbxCc5.TabIndex = 9;
             // 
             // TbxCu1
             // 
@@ -406,12 +371,58 @@
             this.LblOvGrPo.Size = new System.Drawing.Size(0, 13);
             this.LblOvGrPo.TabIndex = 38;
             // 
+            // CbxCC1
+            // 
+            this.CbxCC1.FormattingEnabled = true;
+            this.CbxCC1.Location = new System.Drawing.Point(15, 37);
+            this.CbxCC1.Name = "CbxCC1";
+            this.CbxCC1.Size = new System.Drawing.Size(114, 21);
+            this.CbxCC1.TabIndex = 39;
+            this.CbxCC1.SelectedIndexChanged += new System.EventHandler(this.CbxCC1_SelectedIndexChanged);
+            // 
+            // CbxCC2
+            // 
+            this.CbxCC2.FormattingEnabled = true;
+            this.CbxCC2.Location = new System.Drawing.Point(15, 63);
+            this.CbxCC2.Name = "CbxCC2";
+            this.CbxCC2.Size = new System.Drawing.Size(114, 21);
+            this.CbxCC2.TabIndex = 40;
+            // 
+            // CbxCC3
+            // 
+            this.CbxCC3.FormattingEnabled = true;
+            this.CbxCC3.Location = new System.Drawing.Point(15, 89);
+            this.CbxCC3.Name = "CbxCC3";
+            this.CbxCC3.Size = new System.Drawing.Size(114, 21);
+            this.CbxCC3.TabIndex = 41;
+            // 
+            // CbxCC4
+            // 
+            this.CbxCC4.FormattingEnabled = true;
+            this.CbxCC4.Location = new System.Drawing.Point(15, 115);
+            this.CbxCC4.Name = "CbxCC4";
+            this.CbxCC4.Size = new System.Drawing.Size(114, 21);
+            this.CbxCC4.TabIndex = 42;
+            // 
+            // CbxCC5
+            // 
+            this.CbxCC5.FormattingEnabled = true;
+            this.CbxCC5.Location = new System.Drawing.Point(15, 141);
+            this.CbxCC5.Name = "CbxCC5";
+            this.CbxCC5.Size = new System.Drawing.Size(114, 21);
+            this.CbxCC5.TabIndex = 43;
+            // 
             // RandomGpaCalculationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(462, 310);
+            this.Controls.Add(this.CbxCC5);
+            this.Controls.Add(this.CbxCC4);
+            this.Controls.Add(this.CbxCC3);
+            this.Controls.Add(this.CbxCC2);
+            this.Controls.Add(this.CbxCC1);
             this.Controls.Add(this.LblOvGrPo);
             this.Controls.Add(this.LblGraPoAve);
             this.Controls.Add(this.LblCuPo);
@@ -441,11 +452,6 @@
             this.Controls.Add(this.TbxCu3);
             this.Controls.Add(this.TbxCu2);
             this.Controls.Add(this.TbxCu1);
-            this.Controls.Add(this.TbxCc5);
-            this.Controls.Add(this.TbxCc4);
-            this.Controls.Add(this.TbxCc2);
-            this.Controls.Add(this.TbxCc3);
-            this.Controls.Add(this.TbxCc1);
             this.Controls.Add(this.LblPoint);
             this.Controls.Add(this.LblGrade);
             this.Controls.Add(this.LblScores);
@@ -465,11 +471,6 @@
         private System.Windows.Forms.Label LblScores;
         private System.Windows.Forms.Label LblGrade;
         private System.Windows.Forms.Label LblPoint;
-        private System.Windows.Forms.TextBox TbxCc1;
-        private System.Windows.Forms.TextBox TbxCc3;
-        private System.Windows.Forms.TextBox TbxCc2;
-        private System.Windows.Forms.TextBox TbxCc4;
-        private System.Windows.Forms.TextBox TbxCc5;
         private System.Windows.Forms.TextBox TbxCu1;
         private System.Windows.Forms.TextBox TbxCu2;
         private System.Windows.Forms.TextBox TbxCu3;
@@ -499,5 +500,10 @@
         private System.Windows.Forms.Label LblCuPo;
         private System.Windows.Forms.Label LblGraPoAve;
         private System.Windows.Forms.Label LblOvGrPo;
+        private System.Windows.Forms.ComboBox CbxCC1;
+        private System.Windows.Forms.ComboBox CbxCC2;
+        private System.Windows.Forms.ComboBox CbxCC3;
+        private System.Windows.Forms.ComboBox CbxCC4;
+        private System.Windows.Forms.ComboBox CbxCC5;
     }
 }
