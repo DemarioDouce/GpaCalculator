@@ -12,17 +12,17 @@ namespace GpaCalculatorDemo
 {
     public partial class RandomGpaCalculationForm : Form
     {
-         void Course()
+
+        Dictionary<string, string> CourseCodeDic = new Dictionary<string, string>
         {
-            Dictionary<string, string> CourseCodeDic = new Dictionary<string, string>();
 
-            CourseCodeDic.Add("COMP123", "Programming 2");
-            CourseCodeDic.Add("CGHE432", "College Commuication 2");
-            CourseCodeDic.Add("GVCD345", "Advance Database");
-            CourseCodeDic.Add("PSBG562", "Java Programming");
-            CourseCodeDic.Add("NMJU562", "Object Unit Programming");
-
-        }
+            { "COMP123", "Programming 2" },
+            { "CGHE432", "College Commuication 2" },
+            { "GVCD345", "Advance Database" },
+            { "PSBG562", "Java Programming" },
+            { "NMJU562", "Object Unit Programming" }
+        
+        };
 
         GpaCalculator GpaCalculator;
 
@@ -230,7 +230,13 @@ namespace GpaCalculatorDemo
         }
         private void CbxCC1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CbxCC1.DataSource = new BindingSource(CourseCodeDic, null);
+            CbxCC1.ValueMember = "Value";
+            CbxCC1.DisplayMember = "Key";
+
         }
+
+
+
     }
 }
