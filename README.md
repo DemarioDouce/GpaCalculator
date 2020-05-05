@@ -1,4 +1,4 @@
-# GpaCalculator
+# Gpa Calculator
 ## Programming 2 assignment
 ---
 
