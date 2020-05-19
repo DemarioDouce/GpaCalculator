@@ -1,7 +1,6 @@
 # Gpa Calculator
 ## Programming 2 assignment
 ---
-
 * Show a splash screen
 * Main form consisting of:
     * Buttons
