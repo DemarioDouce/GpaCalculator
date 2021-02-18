@@ -1,5 +1,5 @@
 # Gpa Calculator
 ---
 ## Screenshot
-![GPA mockup image.](/Mockups/MockupGPA.png)
+![Mockup image.](/Mockups/MockupGPA.png)
 ---
